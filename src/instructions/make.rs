@@ -2,9 +2,7 @@ use pinocchio::{
     account_info::AccountInfo,
     instruction::{Seed, Signer},
     program_error::ProgramError,
-    pubkey,
-    sysvars::{rent::Rent, Sysvar},
-    ProgramResult,
+    pubkey, ProgramResult,
 };
 use pinocchio_log::log;
 use pinocchio_token::state::TokenAccount;
