@@ -21,7 +21,6 @@ pub struct MakeAccounts<'a> {
     pub vault: &'a AccountInfo,
     pub system_program: &'a AccountInfo,
     pub token_program: &'a AccountInfo,
-    pub associated_token_account_program: &'a AccountInfo,
 }
 
 impl<'a> TryFrom<&'a [AccountInfo]> for MakeAccounts<'a> {
@@ -37,7 +36,7 @@ impl<'a> TryFrom<&'a [AccountInfo]> for MakeAccounts<'a> {
             vault,
             system_program,
             token_program,
-            associated_token_account_program,
+            _
         ] = accounts
         else {
             return Err(ProgramError::NotEnoughAccountKeys);
@@ -59,7 +58,6 @@ impl<'a> TryFrom<&'a [AccountInfo]> for MakeAccounts<'a> {
             vault,
             system_program,
             token_program,
-            associated_token_account_program,
         })
     }
 }
